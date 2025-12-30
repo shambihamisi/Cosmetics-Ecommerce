@@ -49,7 +49,7 @@ const [Isopen,setIsOpen] = useState(false);
 
             <Link to='/cart' className='relative'>
                 <img src={assets.cart_icon} alt="" className='w-5 min-w-5'/>
-                <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]'>10</p>
+                <p className='absolute -right-1.25 -bottom-1.25 w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]'>10</p>
             </Link>
 
             <img onClick={() => setIsOpen(true)} src={assets.menu_icon} alt="" className='w-5 cursor-pointer sm:hidden'/>
@@ -57,7 +57,7 @@ const [Isopen,setIsOpen] = useState(false);
 
             {/* Sidebar menu for small screens */}
 
-            <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-lime-100 transition-all ${Isopen ? 'w-full' : 'w-0'}`}>
+            <div className={`z-20 absolute top-0 right-0 bottom-0 overflow-hidden bg-lime-100 transition-all ${Isopen ? 'w-full' : 'w-0'}`}>
                 <div className="flex flex-col text-stone-500">
                     <div onClick={() => setIsOpen(false)} className='flex items-center gap-4 p-3 cursor-pointer'>
                         <img src={assets.cross_icon} alt="" className='h-4'/>
