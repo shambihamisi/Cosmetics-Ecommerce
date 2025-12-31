@@ -9,36 +9,36 @@ const [Isopen,setIsOpen] = useState(false);
   return (
     <div className='flex items-center justify-between py-5 font-medium'>
         
-        <div className='w-50 text-stone-500 font-extrabold font-belleza'>BELLEZA</div>
+        <div className='text-3xl text-stone-500 font-extrabold font-belleza'>BELLEZA</div>
 
         <ul className='hidden sm:flex gap-5 text-sm text-stone-500'>
-            <NavLink to='/' className='flex flex-col items-center gap-1'>
+            <NavLink to='/' className='transition-transform duration-300 ease-out hover:-translate-y-2 flex flex-col items-center gap-1'>
                 <p>HOME</p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-stone-500 hidden'/>
             </NavLink>
 
-            <NavLink to='/collection' className='flex flex-col items-center gap-1'>
+            <NavLink to='/collection' className='transition-transform duration-300 ease-out hover:-translate-y-2 flex flex-col items-center gap-1'>
                 <p>COLLECTION</p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-stone-500 hidden'/>
             </NavLink>
 
-            <NavLink to='/about' className='flex flex-col items-center gap-1'>
+            <NavLink to='/about' className='transition-transform duration-300 ease-out hover:-translate-y-2 flex flex-col items-center gap-1'>
                 <p>ABOUT</p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-stone-500 hidden'/>
             </NavLink>
 
-            <NavLink to='/contact' className='flex flex-col items-center gap-1'>
+            <NavLink to='/contact' className='transition-transform duration-300 ease-out hover:-translate-y-2 flex flex-col items-center gap-1'>
                 <p>CONTACT</p>
                 <hr className='w-2/4 border-none h-[1.5px] bg-stone-500 hidden'/>
             </NavLink>
         </ul>
 
         <div className='flex items-center gap-6'>
-            <img src={assets.search_icon} alt="" className='w-5 cursor-pointer'/>
+            <img src={assets.search_icon} alt="" className='transition-transform duration-300 ease-out hover:-translate-y-2 w-5 cursor-pointer'/>
 
             <div className='group relative'>
-                <img src={assets.profile_icon} alt="" className='w-5 cursor-pointer'/>
-                <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>
+                <img src={assets.profile_icon} alt="" className='transition-transform duration-300 ease-out hover:-translate-y-2 w-5 cursor-pointer'/>
+                <div className='group-hover:block hidden absolute z-10 right-0 pt-4'>
                     <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-lime-50 text-yellow-700 rounded'>
                             <p className='cursor-pointer hover:text-yellow-900'>My profile</p>
                             <p className='cursor-pointer hover:text-yellow-900'>Orders</p>
@@ -47,12 +47,12 @@ const [Isopen,setIsOpen] = useState(false);
                 </div>
             </div>
 
-            <Link to='/cart' className='relative'>
+            <Link to='/cart' className='transition-transform duration-300 ease-out hover:-translate-y-2 relative'>
                 <img src={assets.cart_icon} alt="" className='w-5 min-w-5'/>
                 <p className='absolute -right-1.25 -bottom-1.25 w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]'>10</p>
             </Link>
 
-            <img onClick={() => setIsOpen(true)} src={assets.menu_icon} alt="" className='w-5 cursor-pointer sm:hidden'/>
+            <img onClick={() => setIsOpen(true)} src={assets.menu_icon} alt="" className='transition-transform duration-300 ease-out hover:-translate-y-2 w-5 cursor-pointer sm:hidden'/>
         </div>
 
             {/* Sidebar menu for small screens */}
@@ -63,10 +63,10 @@ const [Isopen,setIsOpen] = useState(false);
                         <img src={assets.cross_icon} alt="" className='h-4'/>
                     </div>
 
-                    <NavLink onClick={() => setIsOpen(false)} className='py-2 pl-6 text-6xl text-yellow-800 font-belleza' to='/'>HOME</NavLink>
-                    <NavLink onClick={() => setIsOpen(false)} className='py-2 pl-6 text-6xl text-yellow-800 font-belleza' to='/about'>ABOUT</NavLink>
-                    <NavLink onClick={() => setIsOpen(false)} className='py-2 pl-6 text-6xl text-yellow-800 font-belleza' to='/collection'>COLLECTION</NavLink>
-                    <NavLink onClick={() => setIsOpen(false)} className='py-2 pl-6 text-6xl text-yellow-800 font-belleza' to='/contact'>CONTACT</NavLink>
+                    <NavLink onClick={() => setIsOpen(false)} className='transition-transform duration-300 ease-out hover:translate-x-2 py-2 pl-6 text-6xl text-yellow-800 font-belleza' to='/'>HOME</NavLink>
+                    <NavLink onClick={() => setIsOpen(false)} className='transition-transform duration-300 ease-out hover:translate-x-2 py-2 pl-6 text-6xl text-yellow-800 font-belleza' to='/about'>ABOUT</NavLink>
+                    <NavLink onClick={() => setIsOpen(false)} className='transition-transform duration-300 ease-out hover:translate-x-2 py-2 pl-6 text-6xl text-yellow-800 font-belleza' to='/collection'>COLLECTION</NavLink>
+                    <NavLink onClick={() => setIsOpen(false)} className='transition-transform duration-300 ease-out hover:translate-x-2 py-2 pl-6 text-6xl text-yellow-800 font-belleza' to='/contact'>CONTACT</NavLink>
                 </div>
 
             </div>

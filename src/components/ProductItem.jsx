@@ -7,7 +7,7 @@ const ProductItem = ({id,image,title,price,label}) => {
     const {currency} = useContext(ShopContext);
 
   return (
-        <Link to={`/product/${id}`} className="block font-rufina text-amber-800">
+        <Link to={`/product/${id}`} className="block font-rufina text-[#7a5a2a]">
 
             {/* white tile */}
             <div className="bg-stone-100 h-130 lg:h-155 px-8 py-10">
@@ -30,7 +30,7 @@ const ProductItem = ({id,image,title,price,label}) => {
                 </div>
             </div>
 
-            <div className="pt-4">
+            <div className="pt-4 px-8">
                 <p className="text-lg leading-snug">{title}</p>
                 <p className="text-base font-medium">
                 {currency}

@@ -23,7 +23,9 @@ const Hero = () => {
                 <img src={makeup} alt="makeup image" className='absolute inset-0 h-full w-full object-cover'/>
                 
                 <button className='absolute lg:relative -top-4 lg:top-auto z-10 px-16 py-2 sm:px-24 sm:py-2 lg:px-30 lg:py-4 border border-amber-900 bg-lime-200 text-amber-800 uppercase lg:mb-14 cursor-pointer hover:bg-lime-300'>
+                    <a href="/collection">
                     Shop up to 20% off
+                    </a>
                 </button>
             </div>
 
