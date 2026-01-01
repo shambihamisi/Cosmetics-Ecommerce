@@ -8,6 +8,7 @@
 @theme {
   --font-belleza: "Belleza", sans-serif; 
   --font-rufina: "Rufina", sans-serif;
+  --color-brown: #7a5a2a;
 }
 
 a.active hr{

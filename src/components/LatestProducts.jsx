@@ -22,7 +22,7 @@ const LatestProducts = () => {
   ];
 
   return (
-    <section className='relative w-full overflow-hidden bg-lime-100 text-[#7a5a2a] px-4 sm:px-6 lg:px-10 py-10"'>
+    <section className='relative w-full overflow-hidden bg-lime-100 text-brown px-4 sm:px-6 lg:px-10 py-10"'>
         <div className='text-center py-10 mt-20 text-4xl'>
             <Title text1={'LATEST'} text2={'PRODUCTS'}/>
         </div>
@@ -70,14 +70,14 @@ const LatestProducts = () => {
 
             {/* TITLE */}
             <div className="relative z-10 mx-auto max-w-3xl text-center">
-                <p className="text-lg uppercase font-belleza tracking-[0.22em] text-[#7a5a2a] sm:text-xl">
+                <p className="text-lg uppercase font-belleza tracking-[0.22em] text-brown sm:text-xl">
                 The best form of beauty,
                 <br />
                 is emptiness.
                 </p>
 
 
-                <p className="mt-6 font-rufina text-2xl leading-snug text-[#7a5a2a] sm:text-3xl">
+                <p className="mt-6 font-rufina text-2xl leading-snug text-brown sm:text-3xl">
                 Beauty is presence. It is confidence made visible. We exist to curate products that speak before you do. Each formula is chosen with intention, every detail refined with care. This is where elegance meets strength, and your beauty shows up without permission.
                 </p>
 
@@ -85,7 +85,7 @@ const LatestProducts = () => {
                 <a
                 href="/collection"
                 aria-label="Experience the difference"
-                className="mt-10 inline-flex items-center justify-center gap-2 text-sm uppercase tracking-[0.18em] font-belleza text-[#7a5a2a] transition-transform duration-300 ease-out hover:translate-x-2">
+                className="mt-10 inline-flex items-center justify-center gap-2 text-sm uppercase tracking-[0.18em] font-belleza text-brown transition-transform duration-300 ease-out hover:translate-x-2">
                 <span aria-hidden="true">→</span>
                 Experience the difference
                 </a>
