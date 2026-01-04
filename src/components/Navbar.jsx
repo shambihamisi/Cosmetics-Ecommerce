@@ -1,45 +1,51 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import {assets} from '../assets/assets'
+import { ShopContext } from '../context/ShopContext';
 
 const Navbar = () => {
 
 const [Isopen,setIsOpen] = useState(false);
 
+const { setShowSearch } = useContext(ShopContext)
+
   return (
     <div className='flex items-center justify-between py-5 font-medium'>
         
-        <div className='text-3xl text-stone-500 font-extrabold font-belleza'>BELLEZA</div>
+        <a href="/" className='text-5xl text-brown font-extrabold font-belleza'>BELLEZA</a>
 
-        <ul className='hidden sm:flex gap-5 text-sm text-stone-500'>
+        <ul className='hidden md:flex gap-5 text-sm text-brown'>
             <NavLink to='/' className='transition-transform duration-300 ease-out hover:-translate-y-2 flex flex-col items-center gap-1'>
                 <p>HOME</p>
-                <hr className='w-2/4 border-none h-[1.5px] bg-stone-500 hidden'/>
+                <hr className='w-2/4 border-none h-[1.5px] bg-brown hidden'/>
             </NavLink>
 
             <NavLink to='/collection' className='transition-transform duration-300 ease-out hover:-translate-y-2 flex flex-col items-center gap-1'>
                 <p>COLLECTION</p>
-                <hr className='w-2/4 border-none h-[1.5px] bg-stone-500 hidden'/>
+                <hr className='w-2/4 border-none h-[1.5px] bg-brown hidden'/>
             </NavLink>
 
             <NavLink to='/about' className='transition-transform duration-300 ease-out hover:-translate-y-2 flex flex-col items-center gap-1'>
                 <p>ABOUT</p>
-                <hr className='w-2/4 border-none h-[1.5px] bg-stone-500 hidden'/>
+                <hr className='w-2/4 border-none h-[1.5px] bg-brown hidden'/>
             </NavLink>
 
             <NavLink to='/contact' className='transition-transform duration-300 ease-out hover:-translate-y-2 flex flex-col items-center gap-1'>
                 <p>CONTACT</p>
-                <hr className='w-2/4 border-none h-[1.5px] bg-stone-500 hidden'/>
+                <hr className='w-2/4 border-none h-[1.5px] bg-brown hidden'/>
             </NavLink>
         </ul>
 
         <div className='flex items-center gap-6'>
-            <img src={assets.search_icon} alt="" className='transition-transform duration-300 ease-out hover:-translate-y-2 w-5 cursor-pointer'/>
+            <img 
+            onClick={() => setShowSearch(true)}
+            src={assets.search_icon} alt="" 
+            className='transition-transform duration-300 ease-out hover:-translate-y-2 w-5 cursor-pointer'/>
 
             <div className='group relative'>
                 <img src={assets.profile_icon} alt="" className='transition-transform duration-300 ease-out hover:-translate-y-2 w-5 cursor-pointer'/>
                 <div className='group-hover:block hidden absolute z-10 right-0 pt-4'>
-                    <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-lime-50 text-yellow-700 rounded'>
+                    <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-lime text-brown rounded'>
                             <p className='cursor-pointer hover:text-yellow-900'>My profile</p>
                             <p className='cursor-pointer hover:text-yellow-900'>Orders</p>
                             <p className='cursor-pointer hover:text-yellow-900'>Logout</p>
@@ -52,12 +58,12 @@ const [Isopen,setIsOpen] = useState(false);
                 <p className='absolute -right-1.25 -bottom-1.25 w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]'>10</p>
             </Link>
 
-            <img onClick={() => setIsOpen(true)} src={assets.menu_icon} alt="" className='transition-transform duration-300 ease-out hover:-translate-y-2 w-5 cursor-pointer sm:hidden'/>
+            <img onClick={() => setIsOpen(true)} src={assets.menu_icon} alt="" className='transition-transform duration-300 ease-out hover:-translate-y-2 w-5 cursor-pointer md:hidden'/>
         </div>
 
             {/* Sidebar menu for small screens */}
 
-            <div className={`z-20 absolute top-0 right-0 bottom-0 overflow-hidden bg-lime-100 transition-all ${Isopen ? 'w-full' : 'w-0'}`}>
+            <div className={`z-20 absolute top-0 right-0 bottom-0 overflow-hidden bg-lime transition-all ${Isopen ? 'w-full' : 'w-0'}`}>
                 <div className="flex flex-col text-stone-500">
                     <div onClick={() => setIsOpen(false)} className='flex items-center gap-4 p-3 cursor-pointer'>
                         <img src={assets.cross_icon} alt="" className='h-4'/>

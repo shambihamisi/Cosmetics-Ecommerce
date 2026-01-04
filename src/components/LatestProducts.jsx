@@ -22,7 +22,7 @@ const LatestProducts = () => {
   ];
 
   return (
-    <section className='relative w-full overflow-hidden bg-lime-100 text-brown px-4 sm:px-6 lg:px-10 py-10"'>
+    <section className='relative w-full overflow-hidden bg-lime text-brown px-4 sm:px-6 lg:px-10 py-10"'>
         <div className='text-center py-10 mt-20 text-4xl'>
             <Title text1={'LATEST'} text2={'PRODUCTS'}/>
         </div>
@@ -69,7 +69,7 @@ const LatestProducts = () => {
 
 
             {/* TITLE */}
-            <div className="relative z-10 mx-auto max-w-3xl text-center">
+            <div className="relative z-5 mx-auto max-w-3xl text-center">
                 <p className="text-lg uppercase font-belleza tracking-[0.22em] text-brown sm:text-xl">
                 The best form of beauty,
                 <br />

@@ -6,13 +6,70 @@ import ProductItem from '../components/ProductItem'
 
 const Collection = () => {
 
-  const { products } = useContext(ShopContext);
+  const { products, search, showSearch } = useContext(ShopContext);
   const [showFilter,setShowFilter] = useState(false)
   const [filterProducts,setFilterProducts] = useState([]);
+  const [category,setCategory] = useState([]);
+  const [sortType,setSortType] = useState('relevance')
+
+  const toggleCategory = (e) => {
+
+      if (category.includes(e.target.value)) {
+        setCategory(prev=> prev.filter(item => item !== e.target.value))
+      }
+      else {
+        setCategory(prev => [...prev,e.target.value])
+      }
+
+  }
+
+  const applyFilter = () => {
+
+    let productsCopy = products.slice();
+
+    if (showSearch && search) {
+      productsCopy = productsCopy.filter(item => item.title.toLowerCase().includes(search.toLowerCase()))
+    }
+
+    if (category.length > 0) {
+      productsCopy = productsCopy.filter(item => category.includes(item.category));
+    }
+
+    setFilterProducts(productsCopy)
+
+  }
+
+  const sortProduct = () => {
+
+    let fpCopy = filterProducts.slice();
+
+    switch (sortType) {
+      case 'low-high':
+        setFilterProducts(fpCopy.sort((a,b) => (a.price - b.price)));
+        break;
+
+      case 'high-low':
+        setFilterProducts(fpCopy.sort((a,b) => (b.price - a.price)));
+        break;
+
+      default:
+        applyFilter();
+        break;
+    }
+
+  }
 
   useEffect(() => {
     setFilterProducts(products)
   },[]);
+
+  useEffect(() => {
+    applyFilter();
+  },[category,search,showSearch])
+
+  useEffect(() => {
+    sortProduct();
+  },[sortType])
 
   return (
     <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t border-brown'>
@@ -33,7 +90,8 @@ const Collection = () => {
               <input 
               type="checkbox" 
               className='w-3 mr-2'
-              value='Skincare'
+              value={'Skincare'}
+              onChange={toggleCategory}
               />
               Skincare
             </p>
@@ -41,8 +99,9 @@ const Collection = () => {
             <p>
               <input 
               type="checkbox" 
-              className='w- mr-2'
-              value='Makeup'
+              className='w-3 mr-2'
+              value={'Makeup'}
+              onChange={toggleCategory}
               />
               Makeup
             </p>
@@ -50,8 +109,9 @@ const Collection = () => {
             <p>
               <input 
               type="checkbox" 
-              className='w- mr-2'
-              value='Haircare'
+              className='w-3 mr-2'
+              value={'Haircare'}
+              onChange={toggleCategory}
               />
               Haircare
             </p>
@@ -60,7 +120,8 @@ const Collection = () => {
               <input 
               type="checkbox" 
               className='w-3 mr-2'
-              value='Fragrance'
+              value={'Fragrance'}
+              onChange={toggleCategory}
               />
               Fragrance
             </p>
@@ -69,7 +130,8 @@ const Collection = () => {
               <input 
               type="checkbox" 
               className='w-3 mr-2'
-              value='Bodycare'
+              value={'Bodycare'}
+              onChange={toggleCategory}
               />
               Bodycare
             </p>
@@ -78,7 +140,8 @@ const Collection = () => {
               <input 
               type="checkbox" 
               className='w-3 mr-2'
-              value='Tools & Accessories'
+              value={'Tools & Accessories'}
+              onChange={toggleCategory}
               />
               Tools & Accessories
             </p>
@@ -94,7 +157,7 @@ const Collection = () => {
           <Title text1={'ALL PRODUCTS'}/>
 
           {/*SORT BY */}
-          <select className='border border-brown text-sm px-3 text-brown'>
+          <select onChange={(e) => setSortType(e.target.value)} className='border border-brown text-sm px-3 text-brown'>
             <option value="relevance">Sort by: Relevance</option>
             <option value="low-high">Sort by: Low to High</option>
             <option value="high-low">Sort by: High to Low</option>

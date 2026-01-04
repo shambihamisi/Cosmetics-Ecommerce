@@ -4,7 +4,7 @@ import makeup from '../images/makeup.jpg'
 
 const Hero = () => {
   return (
-    <section className='relative w-full overflow-hidden bg-[#f5f1ee]'>
+    <section className='relative w-full overflow-hidden bg-brown'>
         <div className='mx-auto grid min-h-screen max-w-7xl grid-cols-1 lg:grid-cols-2'>
 
             {/*LEFT SIDE IMAGE */}
@@ -22,7 +22,7 @@ const Hero = () => {
             <div className='relative flex items-center lg:items-end justify-center'>
                 <img src={makeup} alt="makeup image" className='absolute inset-0 h-full w-full object-cover'/>
                 
-                <button className='absolute lg:relative -top-4 lg:top-auto z-10 px-16 py-2 sm:px-24 sm:py-2 lg:px-30 lg:py-4 border border-amber-900 bg-lime-200 text-amber-800 uppercase lg:mb-14 cursor-pointer hover:bg-lime-300'>
+                <button className='absolute lg:relative -top-4 lg:top-auto z-5 px-16 py-2 sm:px-24 sm:py-2 lg:px-30 lg:py-4 border border-amber-900 bg-lime-200 text-brown uppercase lg:mb-14 cursor-pointer hover:bg-lime-300'>
                     <a href="/collection">
                     Shop up to 20% off
                     </a>
