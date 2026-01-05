@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { products } from "../assets/assets";
 
 export const ShopContext = createContext();
@@ -9,6 +9,25 @@ const ShopContextprovider = (props) => {
     const delivery_fee = 10;
     const [search,setSearch] = useState('');
     const [showSearch,setShowSearch] = useState(false);
+    const [cartItems,setCartItems] = useState({});
+
+    const onAdd = async (itemId, qty) => {
+
+        let cartData = structuredClone(cartItems);
+
+        if (cartData[itemId]) {
+            cartData[itemId] += qty;
+        }
+        else {
+            cartData[itemId] = qty;
+        }
+        setCartItems(cartData);
+
+    }
+
+    useEffect(() => {
+        console.log(cartItems);   
+    },[cartItems])
 
 
     const value = {
@@ -19,6 +38,8 @@ const ShopContextprovider = (props) => {
          setSearch,
          showSearch,
          setShowSearch,
+         cartItems,
+         onAdd,
     }
 
     return (

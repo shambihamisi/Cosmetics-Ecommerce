@@ -12,6 +12,8 @@ import Product from './pages/Product'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import SearchBar from './components/SearchBar'
+import ScrollTopButton from "./components/ScrollTopButton";
+
 
 const App = () => {
   return (
@@ -29,6 +31,7 @@ const App = () => {
         <Route path='/place-order' element={<PlaceOrder/>}></Route>
         <Route path='/product/:productId' element={<Product/>}></Route>
       </Routes>
+      <ScrollTopButton />
       <Footer />
     </div>
   )

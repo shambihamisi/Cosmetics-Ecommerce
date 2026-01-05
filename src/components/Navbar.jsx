@@ -2,12 +2,15 @@ import React, { useContext, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import {assets} from '../assets/assets'
 import { ShopContext } from '../context/ShopContext';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
 
 const [Isopen,setIsOpen] = useState(false);
 
-const { setShowSearch } = useContext(ShopContext)
+const { setShowSearch } = useContext(ShopContext);
+
+const navigate = useNavigate();
 
   return (
     <div className='flex items-center justify-between py-5 font-medium'>
@@ -38,7 +41,7 @@ const { setShowSearch } = useContext(ShopContext)
 
         <div className='flex items-center gap-6'>
             <img 
-            onClick={() => setShowSearch(true)}
+            onClick={() => {setShowSearch(true); navigate('/collection')}}
             src={assets.search_icon} alt="" 
             className='transition-transform duration-300 ease-out hover:-translate-y-2 w-5 cursor-pointer'/>
 
