@@ -72,7 +72,7 @@ const Collection = () => {
   },[sortType])
 
   return (
-    <section className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t border-brown'>
+    <section className='flex flex-col xl:flex-row gap-1 sm:gap-10 pt-10 border-t border-brown'>
 
       {/* FILTER CATEGORIES */}
       <div className='min-w-60'>

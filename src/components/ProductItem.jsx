@@ -10,7 +10,7 @@ const ProductItem = ({id,image,title,price,label}) => {
         <Link to={`/product/${id}`} className="block font-rufina text-brown">
 
             {/* white tile */}
-            <div className="bg-stone-100 h-130 lg:h-155 px-8 py-10">
+            <div className="bg-stone-100 h-100 lg:h-120 px-8 py-8">
                 <div className="h-full flex flex-col">
                 {/* top label */}
                 <div className="flex items-center gap-2 text-sm tracking-wide mb-6">

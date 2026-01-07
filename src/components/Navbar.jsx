@@ -8,7 +8,7 @@ const Navbar = () => {
 
 const [Isopen,setIsOpen] = useState(false);
 
-const { setShowSearch } = useContext(ShopContext);
+const { setShowSearch, getCartCount } = useContext(ShopContext);
 
 const navigate = useNavigate();
 
@@ -58,7 +58,7 @@ const navigate = useNavigate();
 
             <Link to='/cart' className='transition-transform duration-300 ease-out hover:-translate-y-2 relative'>
                 <img src={assets.cart_icon} alt="" className='w-5 min-w-5'/>
-                <p className='absolute -right-1.25 -bottom-1.25 w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]'>10</p>
+                <p className='absolute -right-1.25 -bottom-1.25 w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]'>{getCartCount()}</p>
             </Link>
 
             <img onClick={() => setIsOpen(true)} src={assets.menu_icon} alt="" className='transition-transform duration-300 ease-out hover:-translate-y-2 w-5 cursor-pointer md:hidden'/>
