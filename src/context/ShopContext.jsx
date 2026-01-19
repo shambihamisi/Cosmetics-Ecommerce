@@ -85,6 +85,29 @@ const ShopContextprovider = (props) => {
         return totalAmount;
     }
 
+    const getCartLines = () => {
+        const lines = [];
+
+        for (const itemId in cartItems) {
+            const qty = cartItems[itemId];
+            if (!qty || qty <= 0) continue;
+
+            const product = products.find((p) => String(p.id) === String(itemId));
+            if (!product) continue;
+
+            lines.push({
+            id: product.id,
+            title: product.title,
+            price: product.price,
+            image: Array.isArray(product.image) ? product.image[0] : product.image,
+            qty,
+            lineTotal: product.price * qty,
+            });
+        }
+
+        return lines;
+    }
+
 
     const value = {
          products,
@@ -102,6 +125,7 @@ const ShopContextprovider = (props) => {
          updateQuantity,
          getCartAmount,
          navigate,
+         getCartLines,
     }
 
     return (

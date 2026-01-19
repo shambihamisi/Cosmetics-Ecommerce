@@ -34,6 +34,9 @@ import menu_icon from './menu_icon.png'
 import razorpay_logo from './razorpay_logo.png'
 import stripe_logo from './stripe_logo.png'
 import cross_icon from './cross_icon.png'
+import mpesa_logo from './mpesa_logo.png'
+import paypal_logo from './paypal_logo.png'
+import gpay_logo from './GPay_logo.png'
 
 export const assets = {
     cart_icon,
@@ -49,7 +52,10 @@ export const assets = {
     menu_icon,
     razorpay_logo,
     stripe_logo,
-    cross_icon
+    cross_icon,
+    mpesa_logo,
+    paypal_logo,
+    gpay_logo,
 }
 
 export const products = [
