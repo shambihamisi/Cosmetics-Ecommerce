@@ -5,7 +5,7 @@ import makeup from '../images/makeup.jpg'
 const Hero = () => {
   return (
     <section className='relative w-full overflow-hidden bg-brown'>
-        <div className='mx-auto grid min-h-screen max-w-7xl grid-cols-1 lg:grid-cols-2'>
+        <div className='mx-auto grid min-h-screen max-w-9xl grid-cols-1 lg:grid-cols-2'>
 
             {/*LEFT SIDE IMAGE */}
             <div className='relative flex items-end justify-start'>

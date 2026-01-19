@@ -47,11 +47,11 @@ const navigate = useNavigate();
 
             <div className='group relative'>
                 <img src={assets.profile_icon} alt="" className='transition-transform duration-300 ease-out hover:-translate-y-2 w-5 cursor-pointer'/>
-                <div className='group-hover:block hidden absolute z-10 right-0 pt-4'>
+                <div className='group-hover:block hidden absolute z-10 right-0 pt-1'>
                     <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-lime text-brown rounded'>
-                            <p className='cursor-pointer hover:text-yellow-900'>My profile</p>
-                            <p className='cursor-pointer hover:text-yellow-900'>Orders</p>
-                            <p className='cursor-pointer hover:text-yellow-900'>Logout</p>
+                            <p className='cursor-pointer hover:text-amber-950'>My profile</p>
+                            <p className='cursor-pointer hover:text-amber-950'>Orders</p>
+                            <p className='cursor-pointer hover:text-amber-950'>Logout</p>
                     </div>
                 </div>
             </div>

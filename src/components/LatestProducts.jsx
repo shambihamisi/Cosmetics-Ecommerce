@@ -15,12 +15,6 @@ const LatestProducts = () => {
         setLatestItems(products.slice(0,3));
     },[])
 
-    const labels = [
-    "Exfoliates and Plumps",
-    "Relieves and Strengthens",
-    "Exfoliates and Unclogs",
-  ];
-
   return (
     <section className='relative w-full overflow-hidden bg-lime text-brown px-4 sm:px-6 lg:px-10 py-10"'>
         <div className='text-center py-10 mt-20 text-4xl'>
@@ -39,7 +33,6 @@ const LatestProducts = () => {
                     image={item.image}
                     title={item.title}
                     price={item.price}
-                    label={labels[index]}
                     />
                 </div>
                 ))
