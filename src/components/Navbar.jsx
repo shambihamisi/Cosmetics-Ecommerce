@@ -15,7 +15,7 @@ const navigate = useNavigate();
   return (
     <div className='flex items-center justify-between py-5 font-medium'>
         
-        <a href="/" className='text-5xl text-brown font-extrabold font-belleza'>BELLEZA</a>
+        <a href="/" className='text-3xl sm:text-5xl text-brown font-extrabold font-belleza'>BELLEZA</a>
 
         <ul className='hidden md:flex gap-5 text-sm text-brown'>
             <NavLink to='/' className='transition-transform duration-300 ease-out hover:-translate-y-2 flex flex-col items-center gap-1'>
