@@ -73,9 +73,9 @@ const navigate = useNavigate();
                     </div>
 
                     <NavLink onClick={() => setIsOpen(false)} className='transition-transform duration-300 ease-out hover:translate-x-2 py-2 pl-6 text-6xl text-yellow-800 font-belleza' to='/'>HOME</NavLink>
-                    {/* <NavLink onClick={() => setIsOpen(false)} className='transition-transform duration-300 ease-out hover:translate-x-2 py-2 pl-6 text-6xl text-yellow-800 font-belleza' to='/about'>ABOUT</NavLink>
-                    <NavLink onClick={() => setIsOpen(false)} className='transition-transform duration-300 ease-out hover:translate-x-2 py-2 pl-6 text-6xl text-yellow-800 font-belleza' to='/collection'>COLLECTION</NavLink> */}
-                    <NavLink onClick={() => setIsOpen(false)} className='transition-transform duration-300 ease-out hover:translate-x-2 py-2 pl-6 text-6xl text-yellow-800 font-belleza' to='/contact'>CONTACT</NavLink>
+                    {/* <NavLink onClick={() => setIsOpen(false)} className='transition-transform duration-300 ease-out hover:translate-x-2 py-2 pl-6 text-6xl text-yellow-800 font-belleza' to='/about'>ABOUT</NavLink> */}
+                    <NavLink onClick={() => setIsOpen(false)} className='transition-transform duration-300 ease-out hover:translate-x-2 py-2 pl-6 text-6xl text-yellow-800 font-belleza' to='/collection'>COLLECTION</NavLink>
+                    {/* <NavLink onClick={() => setIsOpen(false)} className='transition-transform duration-300 ease-out hover:translate-x-2 py-2 pl-6 text-6xl text-yellow-800 font-belleza' to='/contact'>CONTACT</NavLink> */}
                 </div>
 
             </div>
