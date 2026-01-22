@@ -1,4 +1,4 @@
-Cosmetics E-Commerce Web Application
+**Cosmetics E-Commerce Web Application**
 
 This project is a modern cosmetics e-commerce web application built to provide a smooth and elegant shopping experience. Users can browse curated beauty products, view detailed product pages, manage a shopping cart, and proceed through a streamlined checkout flow.
 
@@ -6,8 +6,8 @@ The application focuses on clean UI design, responsive layouts, and intuitive us
 
 The project is frontend-complete and backend-ready, meaning it is structured to easily integrate with a real API, database, authentication system, and payment services.
 
-Features
-Current Features
+**Features**
+**Current Features**
 
 Home page with featured products and promotions
 
@@ -25,7 +25,7 @@ Login / Signup UI (frontend only)
 
 Responsive layout across all screen sizes
 
-Pages
+**Pages**
 
 Home
 
@@ -45,7 +45,7 @@ About Us (planned)
 
 Contact Us (planned)
 
-Tech Stack
+**Tech Stack**
 
 React
 
@@ -57,7 +57,7 @@ Context API
 
 Vite
 
-Project Structure
+**Project Structure**
 src/
   components/
   pages/
@@ -74,11 +74,11 @@ Context: global state management (cart, search, currency)
 
 Assets: images and icons
 
-Backend Ready
+**Backend Ready**
 
 The project is structured to support future backend integration. The following features are planned for backend implementation:
 
-Backend Requirements
+**Backend Requirements**
 
 User authentication (JWT or session based)
 
@@ -90,7 +90,7 @@ Payment processing (M-Pesa, PayPal, Google Pay)
 
 Database integration (PostgreSQL or MongoDB)
 
-Future Admin Panel
+**Future Admin Panel**
 
 Product management dashboard
 
@@ -102,7 +102,7 @@ Sales analytics
 
 Inventory tracking
 
-Future Enhancements
+**Future Enhancements**
 
 About Us page
 
@@ -118,7 +118,7 @@ Order tracking
 
 Multi-currency support
 
-Purpose
+**Purpose**
 
 This project demonstrates real-world frontend engineering skills, including:
 
