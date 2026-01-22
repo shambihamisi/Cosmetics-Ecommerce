@@ -6,8 +6,8 @@ const LogIn = () => {
 
   return (
     <div className="min-h-[85vh] flex items-center justify-center px-4 py-12">
-      <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 overflow-hidden border rounded-2xl border-brown bg-white">
-        <div className="p-8 sm:p-10 lg:p-12">
+      <div className="w-full max-w-2xl grid grid-cols-1 overflow-hidden border rounded-2xl border-brown bg-white">
+        <div className="p-8">
           <div className="text-center">
             <p className="font-belleza font-extrabold text-4xl sm:text-5xl text-brown">
               BELLEZA
@@ -19,11 +19,7 @@ const LogIn = () => {
             </p>
           </div>
           
-
-          {/* LOGIN */}
           <div className="mt-8">
-            
-
             {/* LOGIN */}
             <form className="mx-auto mt-8 max-w-sm space-y-4">
               {mode === "signup" && (
@@ -130,30 +126,6 @@ const LogIn = () => {
           </div>
         </div>
 
-        <div className="hidden lg:block bg-lime border-l border-brown">
-          <div className="h-full w-full p-12 flex flex-col justify-between">
-            <div>
-              <p className="font-belleza text-5xl text-brown leading-none">
-                Elegance.
-              </p>
-              <p className="mt-3 font-rufina text-sm text-brown/80 max-w-sm">
-                Sign in to access your cart, track your orders, and manage your
-                Belleza collection.
-              </p>
-            </div>
-
-            <div className="border border-brown bg-white p-8">
-              <p className="font-rufina text-sm text-brown">
-                {mode === "login"
-                  ? "Tip: Use your email to continue where you left off."
-                  : "Tip: Create an account to save your favorites and checkout faster."}
-              </p>
-              <div className="mt-6 h-10 w-full border border-brown bg-lime" />
-            </div>
-
-            
-          </div>
-        </div>
       </div>
     </div>
   );
